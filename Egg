@@ -1,0 +1,23 @@
+GameName = "FarmerSim"
+
+tab1name = "Main"
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateButton("AutoHatch", function(value)
+local kdk = true
+while true do
+local args = {
+    [1] = "1"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("PlayerPressedKeyOnEgg"):FireServer(unpack(args))
+
+wait()
+end
+ end)
+local Tab2 = GameName:NewSection("Cocojale")
